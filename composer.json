@@ -17,12 +17,12 @@
     "drupal/field_group" : "^3.0",
     "drupal/permissions_by_term" : "^1.51",
     "drupal/field_permissions" : "^1.0",
-    "jhu-idc/idc_field_widgets": "dev-main"
+    "jhu-idc/reference_value_pair": "dev-main"
   },
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@github.com:jhu-idc/idc_field_widgets.git"
+      "url": "git@github.com:jhu-idc/reference_value_pair.git"
     }
   ]
 }

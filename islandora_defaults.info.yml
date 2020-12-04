@@ -30,6 +30,7 @@ dependencies:
   - path
   - pdf
   - rdf
+  - reference_value_pair
   - rest
   - serialization
   - system
