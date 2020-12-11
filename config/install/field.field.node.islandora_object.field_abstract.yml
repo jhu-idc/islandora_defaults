@@ -1,19 +1,19 @@
-uuid: 97752008-a268-4246-b8f3-f21b65d6e551
+uuid: 22c43421-dd51-4f66-95ff-73761f35d2d4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_alternative_title
+    - field.storage.node.field_abstract
     - node.type.islandora_object
     - taxonomy.vocabulary.language
   module:
     - reference_value_pair
-id: node.islandora_object.field_alternative_title
-field_name: field_alternative_title
+id: node.islandora_object.field_abstract
+field_name: field_abstract
 entity_type: node
 bundle: islandora_object
-label: 'Alternative Title'
-description: ''
+label: Abstract
+description: '<b>Optional.</b> If available, record a summary of the resource.'
 required: false
 translatable: false
 default_value: {  }
@@ -27,5 +27,5 @@ settings:
       field: name
       direction: asc
     auto_create: 0
-    auto_create_bundle: islandora_models
+    auto_create_bundle: ''
 field_type: reference_value_pair

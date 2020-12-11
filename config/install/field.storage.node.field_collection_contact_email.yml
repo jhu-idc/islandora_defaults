@@ -1,27 +1,24 @@
-uuid: eb51eb3b-698a-49e6-8cc4-2fefe141ffec
+uuid: b7ac054a-3649-41c0-adb6-c58d8a1f0085
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
     - node
-    - reference_value_pair
-    - taxonomy
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_alternative_title
-field_name: field_alternative_title
+id: node.field_collection_contact_email
+field_name: field_collection_contact_email
 entity_type: node
-type: reference_value_pair
+type: string
 settings:
-  max_length: '500'
-  target_type: taxonomy_term
+  max_length: 255
   is_ascii: false
   case_sensitive: false
-module: reference_value_pair
+module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

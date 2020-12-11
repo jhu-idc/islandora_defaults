@@ -1,3 +1,4 @@
+uuid: 09193038-2adf-4518-b07f-4ac51b4e15dc
 langcode: en
 status: true
 dependencies:
@@ -9,13 +10,15 @@ dependencies:
     - taxonomy.vocabulary.geo_location
     - taxonomy.vocabulary.person
     - taxonomy.vocabulary.subject
+_core:
+  default_config_hash: OtTjefnDL9wxlQAGypGQ_6MzW1CT7u1acC59N6P5Boc
 id: node.islandora_object.field_subject
 field_name: field_subject
 entity_type: node
 bundle: islandora_object
 label: Subject
-description: ''
-required: false
+description: 'Required. Record 1 or more topic(s) of the resource or term(s) that capture what the resource is about. A play about dolphins will have the subject "Dolphins", not "Drama." Please use or add terms to the Subjects Taxonomy.'
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

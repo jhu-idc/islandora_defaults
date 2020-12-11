@@ -13,3 +13,16 @@ function islandora_defaults_rdf_namespaces() {
     'relators' => 'http://id.loc.gov/vocabulary/relators/',
   ];
 }
+/**
+ * Implements hook_insert()
+ */
+function islandora_defaults_node_insert(Drupal\Core\Entity\EntityInterface $entity) {
+   // if it is a collection object or a repository item, add in the citable URL
+   if ($entity->bundle() == 'collection_object' || $entity->bundle() == 'islandora_object') {
+    $url = \Drupal::urlGenerator()->generateFromRoute('<front>', [], ['absolute' => TRUE]);
+    $entity->field_citable_url=$url.'node/'.$entity->id();
+    \Drupal::logger('islandora_defaults')->info('Setting citable URL on new ' . $entity->bundle() .': ' .  
+        $entity->field_citable_url->getString());
+    $entity->save();
+  }
+}
