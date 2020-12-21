@@ -1,3 +1,4 @@
+uuid: b056385e-ec1a-46a5-a872-f965f72c5d1b
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - search_api.index.default_solr_index
   module:
     - search_api
+_core:
+  default_config_hash: nZqGnnGL1MDIKVoFyKEIPfaOceOn5SIE3nIio_t8ui8
 id: solr_search_content
 label: 'Solr search content'
 module: views
@@ -61,12 +64,25 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: search_api
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          view_modes:
+            'entity:node':
+              article: default
+              collection_object: teaser
+              islandora_object: teaser
+              page: default
+            'entity:taxonomy_term':
+              access_rights: default
+              copyright_and_use: default
+              corporate_body: default
+              family: default
+              genre: default
+              geo_location: default
+              language: default
+              person: default
+              resource_types: default
+              subject: default
       filters:
         type:
           id: type
@@ -77,6 +93,7 @@ display:
           admin_label: ''
           operator: or
           value:
+            collection_object: collection_object
             islandora_object: islandora_object
           group: 1
           exposed: false
@@ -86,6 +103,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -93,8 +112,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -126,6 +143,8 @@ display:
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: search_api_fulltext
             required: false
             remember: false
@@ -135,9 +154,8 @@ display:
               anonymous: '0'
               administrator: '0'
               fedoraadmin: '0'
+              staff: '0'
             placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -167,7 +185,19 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: 'Search Content'
+        title:
+          id: title
+          table: search_api_index_default_solr_index
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: Title
+          plugin_id: search_api
+      title: Search
       header:
         result:
           id: result
@@ -313,9 +343,13 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+        - 'user.node_grants:view'
       cacheable: false
       max-age: -1
-      tags: {  }
+      tags:
+        - 'config:search_api.index.default_solr_index'
   page_1:
     display_plugin: page
     id: page_1
@@ -330,6 +364,10 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+        - 'user.node_grants:view'
       cacheable: false
       max-age: -1
-      tags: {  }
+      tags:
+        - 'config:search_api.index.default_solr_index'
