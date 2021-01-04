@@ -1,3 +1,4 @@
+uuid: 841432f2-31bf-4e89-a0ce-6185596c015c
 langcode: en
 status: true
 dependencies:
@@ -8,10 +9,12 @@ dependencies:
     - system
   theme:
     - carapace
+_core:
+  default_config_hash: Qy_nSE_PRV3YUVnl6KeCHqh_Ja3TtmqZD6bjj0ANEoM
 id: subject
 theme: carapace
 region: sidebar_second
-weight: 0
+weight: -6
 provider: null
 plugin: 'facet_block:subject'
 settings:

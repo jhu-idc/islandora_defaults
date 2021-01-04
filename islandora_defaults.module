@@ -10,7 +10,12 @@
  */
 function islandora_defaults_rdf_namespaces() {
   return [
-    'relators' => 'http://id.loc.gov/vocabulary/relators/',
+      'relators' => 'http://id.loc.gov/vocabulary/relators/',
+      'dcterms' => 'http://purl.org/dc/terms/',
+      'idloc' => 'http://id.loc.gov/vocabulary/identifiers/',
+      'schema' => 'http://schema.org/',
+      'bibo' =>	'http://purl.org/ontology/bibo/',
+      'bibframe' => 'http://id.loc.gov/ontologies/bibframe/'
   ];
 }
 /**
@@ -26,3 +31,14 @@ function islandora_defaults_node_insert(Drupal\Core\Entity\EntityInterface $enti
     $entity->save();
   }
 }
+
+/**
+ * Implements hook_apachesolr_index_document_build()
+ */
+/*
+function islandora_defaults_apachesolr_index_document_build(&$document, $entity, $entity_type) {
+  if ($entity_type == 'node' && $entity->type == 'islandora_object') {
+    $document->addField('ts_field_alternative_title', $entity->field_alternative_title['und'][0]['value']);
+    $document->addField('is_field_integer_field_name', $entity->field_integer_field_name['und'][0]['value']);
+  }
+}*/
