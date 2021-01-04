@@ -2,25 +2,25 @@ langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.contributors
+    - facets.facet.years
   module:
     - context
     - facets
     - islandora
   theme:
     - carapace
-id: contributors
+id: years
 theme: carapace
 region: sidebar_second
 weight: -5
 provider: null
-plugin: 'facet_block:contributors'
+plugin: 'facet_block:years'
 settings:
-  id: 'facet_block:contributors'
-  label: Contributors
+  id: 'facet_block:years'
+  label: Years
   provider: facets
   label_display: visible
-  block_id: contributors
+  block_id: years
 visibility:
   request_path_exclusion:
     id: request_path_exclusion

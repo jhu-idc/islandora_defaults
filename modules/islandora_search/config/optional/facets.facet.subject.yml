@@ -1,4 +1,3 @@
-uuid: d67fc4d6-be0b-408f-a0f8-cb1a7817e273
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - views.view.solr_search_content
   module:
     - search_api
-_core:
-  default_config_hash: TJP2yG8ZBf2x4H9SYx7VkrLBTYmBm2kE9uxA1cbrCas
 id: subject
 name: Subject
 url_alias: subject

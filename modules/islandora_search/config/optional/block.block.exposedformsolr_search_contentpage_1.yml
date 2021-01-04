@@ -1,4 +1,3 @@
-uuid: 64b40114-4835-4f02-b14b-7704bbff3929
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - views
   theme:
     - carapace
-_core:
-  default_config_hash: qAfb4caT_8NQ1iWN2j6l0TBEGLytvNolwkPexVyhDxs
 id: exposedformsolr_search_contentpage_1
 theme: carapace
 region: sidebar_second
