@@ -33,6 +33,7 @@ fieldMappings:
   field_contributor:
     properties:
       - 'dcterms:contributor'
+    mapping_type: rel
   field_copyright_and_use:
     properties:
       - 'dcterms:rights'
