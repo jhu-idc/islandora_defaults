@@ -1,4 +1,3 @@
-uuid: 0680304b-b5c9-4077-8931-a3e3362fe012
 langcode: en
 status: true
 dependencies:
@@ -12,7 +11,7 @@ field_name: field_date_created
 entity_type: node
 bundle: islandora_object
 label: 'Date Created'
-description: ''
+description: "\r\nPlease use the format YYYY-MM-DD or  YYYY-MM or YYYY \r\n(<a href=\"https://www.loc.gov/standards/datetime/\">EDTF</a>)."
 required: false
 translatable: false
 default_value: {  }

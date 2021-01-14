@@ -1,10 +1,13 @@
-uuid: 90fab186-a903-4435-ac01-23089378b719
 langcode: en
 status: true
 dependencies:
   module:
     - controlled_access_terms
+    - field_permissions
     - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
 id: node.field_date_published
 field_name: field_date_published
 entity_type: node
