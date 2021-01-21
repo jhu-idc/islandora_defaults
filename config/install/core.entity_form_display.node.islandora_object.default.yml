@@ -79,11 +79,11 @@ third_party_settings:
       children:
         - title
         - field_title_language
+        - field_alternative_title
         - field_featured_item
         - field_resource_type
-        - field_alternative_title
-        - field_abstract
         - field_description
+        - field_abstract
         - field_table_of_contents
         - field_genre
         - field_subject
@@ -117,10 +117,10 @@ third_party_settings:
       region: content
       format_settings:
         description: ''
-        open: true
         required_fields: true
         id: ''
         classes: ''
+        open: false
       label: Dates
     group_identifiers:
       children:
@@ -135,10 +135,10 @@ third_party_settings:
       region: content
       format_settings:
         description: ''
-        open: true
         required_fields: true
         id: ''
         classes: ''
+        open: false
       label: Identifiers
     group_copyright_and_use:
       children:
@@ -151,10 +151,10 @@ third_party_settings:
       region: content
       format_settings:
         description: ''
-        open: true
         required_fields: true
         id: ''
         classes: ''
+        open: false
       label: 'Copyright and Use'
     group_publisher:
       children:
@@ -167,10 +167,10 @@ third_party_settings:
       region: content
       format_settings:
         description: ''
-        open: true
         required_fields: true
         id: ''
         classes: ''
+        open: false
       label: Publisher
     group_resources:
       children:
@@ -186,10 +186,10 @@ third_party_settings:
       region: content
       format_settings:
         description: ''
-        open: true
         required_fields: true
         id: ''
         classes: ''
+        open: false
       label: Resources
     group_date_solr_year:
       children:
@@ -205,6 +205,19 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Date - Solr Year'
+    group_test:
+      children: {  }
+      parent_name: ''
+      weight: 15
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: Test
 id: node.islandora_object.default
 targetEntityType: node
 bundle: islandora_object
@@ -217,23 +230,19 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_abstract:
-    weight: 17
+    weight: 18
     settings:
-      size_value: 2000
-      placeholder_value: ''
+      size_value: 5000
       rows: 5
+      placeholder_value: ''
     third_party_settings: {  }
     type: reference_value_select
     region: content
   field_access_rights:
     weight: 58
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_buttons
     region: content
   field_access_terms:
     type: options_buttons
@@ -242,10 +251,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_alternative_title:
-    weight: 16
+    weight: 14
     settings:
+      size_value: 5000
       rows: 5
-      size_value: 255
       placeholder_value: ''
     third_party_settings: {  }
     type: reference_value_select
@@ -278,13 +287,9 @@ content:
     region: content
   field_copyright_and_use:
     weight: 57
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_copyright_holder:
     weight: 59
@@ -343,10 +348,10 @@ content:
     type: edtf_default
     region: content
   field_description:
-    weight: 18
+    weight: 17
     settings:
+      size_value: 5000
       rows: 5
-      size_value: 255
       placeholder_value: ''
     third_party_settings: {  }
     type: reference_value_select
@@ -400,7 +405,7 @@ content:
     type: string_textfield
     region: content
   field_featured_item:
-    weight: 14
+    weight: 15
     settings:
       display_label: true
     third_party_settings: {  }
@@ -527,7 +532,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_resource_type:
-    weight: 15
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -555,8 +560,8 @@ content:
   field_table_of_contents:
     weight: 19
     settings:
+      size_value: 5000
       rows: 5
-      size_value: 255
       placeholder_value: ''
     third_party_settings: {  }
     type: reference_value_select

@@ -65,7 +65,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_abstract:
-    weight: 5
+    weight: 40
     label: above
     settings:
       display_invalid_reference: 1
@@ -74,7 +74,7 @@ content:
     type: reference_value_formatter
     region: content
   field_access_rights:
-    weight: 18
+    weight: 15
     label: above
     settings:
       link: true
@@ -82,7 +82,7 @@ content:
     type: entity_reference_label
     region: content
   field_alternative_title:
-    weight: 2
+    weight: 3
     label: above
     settings:
       display_invalid_reference: 1
@@ -91,7 +91,7 @@ content:
     type: reference_value_formatter
     region: content
   field_citable_url:
-    weight: 26
+    weight: 23
     label: above
     settings:
       trim_length: 80
@@ -103,7 +103,7 @@ content:
     type: link
     region: content
   field_collection_number:
-    weight: 16
+    weight: 13
     label: above
     settings:
       link_to_entity: false
@@ -111,7 +111,7 @@ content:
     type: string
     region: content
   field_contributor:
-    weight: 14
+    weight: 11
     label: above
     settings:
       link: true
@@ -119,7 +119,7 @@ content:
     type: typed_relation_default
     region: content
   field_copyright_and_use:
-    weight: 19
+    weight: 16
     label: above
     settings:
       link: true
@@ -127,7 +127,7 @@ content:
     type: entity_reference_label
     region: content
   field_copyright_holder:
-    weight: 20
+    weight: 17
     label: above
     settings:
       link: true
@@ -135,7 +135,7 @@ content:
     type: entity_reference_label
     region: content
   field_creator:
-    weight: 15
+    weight: 12
     label: above
     settings:
       link: true
@@ -143,7 +143,7 @@ content:
     type: typed_relation_default
     region: content
   field_date_available:
-    weight: 21
+    weight: 18
     label: above
     settings:
       date_separator: dash
@@ -154,7 +154,7 @@ content:
     type: edtf_default
     region: content
   field_date_copyrighted:
-    weight: 23
+    weight: 20
     label: above
     settings:
       date_separator: dash
@@ -165,7 +165,7 @@ content:
     type: edtf_default
     region: content
   field_date_created:
-    weight: 22
+    weight: 19
     label: above
     settings:
       date_separator: dash
@@ -176,7 +176,7 @@ content:
     type: edtf_default
     region: content
   field_date_published:
-    weight: 24
+    weight: 21
     label: above
     settings:
       date_separator: dash
@@ -187,7 +187,7 @@ content:
     type: edtf_default
     region: content
   field_description:
-    weight: 4
+    weight: 39
     label: above
     settings:
       display_invalid_reference: 1
@@ -196,7 +196,7 @@ content:
     type: reference_value_formatter
     region: content
   field_digital_identifier:
-    weight: 30
+    weight: 27
     label: above
     settings:
       link_to_entity: false
@@ -204,7 +204,7 @@ content:
     type: string
     region: content
   field_digital_publisher:
-    weight: 28
+    weight: 25
     label: above
     settings:
       link: true
@@ -212,7 +212,7 @@ content:
     type: entity_reference_label
     region: content
   field_dspace_identifier:
-    weight: 31
+    weight: 28
     label: above
     settings:
       trim_length: 80
@@ -224,7 +224,7 @@ content:
     type: link
     region: content
   field_dspace_item_id:
-    weight: 32
+    weight: 29
     label: above
     settings:
       link_to_entity: false
@@ -232,7 +232,7 @@ content:
     type: string
     region: content
   field_extent:
-    weight: 39
+    weight: 36
     label: above
     settings:
       link_to_entity: false
@@ -240,7 +240,7 @@ content:
     type: string
     region: content
   field_featured_item:
-    weight: 3
+    weight: 2
     label: above
     settings:
       format: default
@@ -250,7 +250,7 @@ content:
     type: boolean
     region: content
   field_finding_aid:
-    weight: 36
+    weight: 33
     label: above
     settings:
       trim_length: 80
@@ -263,14 +263,14 @@ content:
     region: content
   field_genre:
     type: entity_reference_label
-    weight: 10
+    weight: 7
     region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
   field_geoportal_link:
-    weight: 38
+    weight: 35
     label: above
     settings:
       trim_length: 80
@@ -282,7 +282,7 @@ content:
     type: link
     region: content
   field_is_part_of:
-    weight: 17
+    weight: 14
     label: above
     settings:
       trim_length: 80
@@ -294,7 +294,7 @@ content:
     type: link
     region: content
   field_issn:
-    weight: 34
+    weight: 31
     label: above
     settings:
       link_to_entity: false
@@ -302,7 +302,7 @@ content:
     type: string
     region: content
   field_item_barcode:
-    weight: 35
+    weight: 32
     label: above
     settings:
       link_to_entity: false
@@ -310,7 +310,7 @@ content:
     type: string
     region: content
   field_jhir:
-    weight: 40
+    weight: 37
     label: above
     settings:
       trim_length: 80
@@ -323,14 +323,14 @@ content:
     region: content
   field_language:
     type: entity_reference_label
-    weight: 8
+    weight: 5
     region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
   field_library_catalog_link:
-    weight: 37
+    weight: 34
     label: above
     settings:
       trim_length: 80
@@ -343,14 +343,14 @@ content:
     region: content
   field_member_of:
     type: entity_reference_label
-    weight: 7
+    weight: 4
     region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
   field_oclc_number:
-    weight: 33
+    weight: 30
     label: above
     settings:
       link_to_entity: false
@@ -358,7 +358,7 @@ content:
     type: string
     region: content
   field_publisher:
-    weight: 27
+    weight: 24
     label: above
     settings:
       link: true
@@ -366,7 +366,7 @@ content:
     type: entity_reference_label
     region: content
   field_publisher_country:
-    weight: 29
+    weight: 26
     label: above
     settings:
       link: true
@@ -374,7 +374,7 @@ content:
     type: entity_reference_label
     region: content
   field_resource_type:
-    weight: 9
+    weight: 6
     label: above
     settings:
       link: true
@@ -382,7 +382,7 @@ content:
     type: entity_reference_label
     region: content
   field_spatial_coverage:
-    weight: 12
+    weight: 9
     label: above
     settings:
       link: true
@@ -390,7 +390,7 @@ content:
     type: entity_reference_label
     region: content
   field_subject:
-    weight: 11
+    weight: 8
     label: above
     settings:
       link: true
@@ -398,7 +398,7 @@ content:
     type: entity_reference_label
     region: content
   field_table_of_contents:
-    weight: 6
+    weight: 41
     label: above
     settings:
       display_invalid_reference: 1
@@ -407,7 +407,7 @@ content:
     type: reference_value_formatter
     region: content
   field_title_language:
-    weight: 41
+    weight: 38
     label: above
     settings:
       link: true
@@ -415,7 +415,7 @@ content:
     type: entity_reference_label
     region: content
   field_years:
-    weight: 25
+    weight: 22
     label: above
     settings:
       date_separator: dash
@@ -426,7 +426,7 @@ content:
     type: edtf_default
     region: content
   islandora_fits_checksum:
-    weight: 13
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
