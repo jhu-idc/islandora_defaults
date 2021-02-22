@@ -52,6 +52,7 @@ dependencies:
       - islandora_defaults
   module:
     - user
+_core:
 id: node.islandora_object.teaser
 targetEntityType: node
 bundle: islandora_object

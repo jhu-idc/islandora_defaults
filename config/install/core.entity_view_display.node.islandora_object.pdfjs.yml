@@ -1,4 +1,3 @@
-uuid: 7811ac32-a9e8-4f88-892d-994f967270ff
 langcode: en
 status: true
 dependencies:
@@ -54,7 +53,6 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: LL0DwJidNZPoF8xl8g2QIW9bNPeiqUcy0CwmsIqfPvo
 id: node.islandora_object.pdfjs
 targetEntityType: node
 bundle: islandora_object

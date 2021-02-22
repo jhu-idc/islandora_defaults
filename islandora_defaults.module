@@ -33,6 +33,19 @@ function islandora_defaults_node_insert(Drupal\Core\Entity\EntityInterface $enti
 }
 
 /**
+ * Implements hook_field_widget_multivalue_form_alter().
+ */
+function islandora_defaults_field_widget_multivalue_form_alter(array &$elements, \Drupal\Core\Form\FormStateInterface $form_state, array $context){
+  // This is used to change the "Add another item" button title to something else.
+  $field_definition = $context['items']->getFieldDefinition();
+  //\Drupal::logger('islandora_defaults')->info("Elements keys: "  . print_r(array_keys($elements), TRUE));
+  $title = $elements['#title'];
+  if (!empty($title)) {
+    $elements['add_more']['#value'] = t("Add another $title");
+  }
+}
+
+/**
  * Implements hook_apachesolr_index_document_build()
  */
 /*
@@ -42,3 +55,28 @@ function islandora_defaults_apachesolr_index_document_build(&$document, $entity,
     $document->addField('is_field_integer_field_name', $entity->field_integer_field_name['und'][0]['value']);
   }
 }*/
+
+/**
+ * Functions to support moving around the instructions on a widget
+ */
+function islandora_defaults_preprocess_form_element(&$variables) {
+    //\Drupal::logger("islandora_defaults")->info('TYPE is ' . $variables['element']['#type'] . ' Title: ' . $variables['element']['#title']);
+
+  // language_select is for the drupal langauage element.  we don't use this
+  // $variables['element']['#type'] == 'language_select' ||
+  if ($variables['element']['#type'] == 'entity_autocomplete' ||
+      $variables['element']['#type'] == 'select' ||
+      $variables['element']['#type'] == 'textfield' ||
+      $variables['element']['#type'] == 'textarea' ||
+      $variables['element']['#type'] == 'url' ||
+      $variables['element']['#type'] == 'item' ||
+      $variables['element']['#type'] == 'radio' ||
+      $variables['element']['#type'] == 'link') {
+    $variables['description_display'] = 'before';
+  }
+
+  if ($variables['element']['#type'] == 'checkbox' ||
+      $variables['element']['#type'] == 'date') {
+    $variables['description_display'] = 'after';
+  }
+}

@@ -1,4 +1,3 @@
-uuid: 07e8e5b9-4a39-4442-a16c-41c2cc013fa6
 langcode: en
 status: true
 dependencies:
@@ -10,7 +9,7 @@ field_name: field_dspace_item_id
 entity_type: node
 bundle: islandora_object
 label: 'DSpace Item ID'
-description: 'Legacy item UUID from DSpace platform.'
+description: '<b>Optional.</b> Record a legacy item''s UUID from DSpace platform.'
 required: false
 translatable: false
 default_value: {  }

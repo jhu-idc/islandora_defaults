@@ -53,7 +53,6 @@ dependencies:
     - controlled_access_terms
     - field_group
     - link
-    - path
     - reference_value_pair
 third_party_settings:
   field_group:
@@ -62,7 +61,6 @@ third_party_settings:
         - field_model
         - field_member_of
         - langcode
-        - field_access_terms
         - field_display_hints
         - field_weight
       parent_name: ''
@@ -79,17 +77,16 @@ third_party_settings:
       children:
         - title
         - field_title_language
-        - field_alternative_title
         - field_featured_item
+        - field_alternative_title
         - field_resource_type
-        - field_description
         - field_abstract
+        - field_description
         - field_table_of_contents
         - field_genre
         - field_subject
         - field_language
         - field_spatial_coverage
-        - field_collection_number
         - field_is_part_of
         - field_contributor
         - field_creator
@@ -106,13 +103,13 @@ third_party_settings:
       region: content
     group_dates:
       children:
+        - field_date_available
         - field_date_created
         - field_date_published
-        - field_date_available
         - field_date_copyrighted
         - group_date_solr_year
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: details
       region: content
       format_settings:
@@ -125,12 +122,13 @@ third_party_settings:
     group_identifiers:
       children:
         - field_citable_url
-        - field_dspace_identifier
-        - field_dspace_item_id
+        - field_collection_number
         - field_digital_identifier
         - field_jhir
+        - field_dspace_identifier
+        - field_dspace_item_id
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: details
       region: content
       format_settings:
@@ -146,7 +144,7 @@ third_party_settings:
         - field_access_rights
         - field_copyright_holder
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: details
       region: content
       format_settings:
@@ -162,7 +160,7 @@ third_party_settings:
         - field_publisher_country
         - field_digital_publisher
       parent_name: ''
-      weight: 4
+      weight: 1
       format_type: details
       region: content
       format_settings:
@@ -175,10 +173,10 @@ third_party_settings:
     group_resources:
       children:
         - field_item_barcode
+        - field_library_catalog_link
         - field_finding_aid
         - field_oclc_number
         - field_issn
-        - field_library_catalog_link
         - field_geoportal_link
       parent_name: ''
       weight: 5
@@ -195,7 +193,7 @@ third_party_settings:
       children:
         - field_years
       parent_name: group_dates
-      weight: 44
+      weight: 46
       format_type: details
       region: content
       format_settings:
@@ -205,19 +203,7 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Date - Solr Year'
-    group_test:
-      children: {  }
-      parent_name: ''
-      weight: 15
-      format_type: details
-      region: content
-      format_settings:
-        description: ''
-        required_fields: true
-        id: ''
-        classes: ''
-        open: false
-      label: Test
+_core:
 id: node.islandora_object.default
 targetEntityType: node
 bundle: islandora_object
@@ -230,7 +216,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_abstract:
-    weight: 18
+    weight: 17
     settings:
       size_value: 5000
       rows: 5
@@ -239,19 +225,13 @@ content:
     type: reference_value_select
     region: content
   field_access_rights:
-    weight: 58
+    weight: 59
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
-  field_access_terms:
-    type: options_buttons
-    weight: 11
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_alternative_title:
-    weight: 14
+    weight: 15
     settings:
       size_value: 5000
       rows: 5
@@ -268,7 +248,7 @@ content:
     type: link_default
     region: content
   field_collection_number:
-    weight: 24
+    weight: 64
     settings:
       size: 60
       placeholder: ''
@@ -276,7 +256,7 @@ content:
     type: string_textfield
     region: content
   field_contributor:
-    weight: 26
+    weight: 25
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -292,7 +272,7 @@ content:
     type: options_select
     region: content
   field_copyright_holder:
-    weight: 59
+    weight: 60
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -302,7 +282,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_creator:
-    weight: 27
+    weight: 26
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -321,7 +301,7 @@ content:
     type: edtf_default
     region: content
   field_date_copyrighted:
-    weight: 43
+    weight: 45
     settings:
       strict_dates: false
       intervals: true
@@ -330,25 +310,25 @@ content:
     type: edtf_default
     region: content
   field_date_created:
-    weight: 40
+    weight: 43
     settings:
+      intervals: '1'
       strict_dates: 0
-      intervals: 0
       sets: 0
     third_party_settings: {  }
     type: edtf_default
     region: content
   field_date_published:
-    weight: 41
+    weight: 44
     settings:
+      intervals: '1'
       strict_dates: 0
-      intervals: 0
       sets: 0
     third_party_settings: {  }
     type: edtf_default
     region: content
   field_description:
-    weight: 17
+    weight: 18
     settings:
       size_value: 5000
       rows: 5
@@ -357,7 +337,7 @@ content:
     type: reference_value_select
     region: content
   field_digital_identifier:
-    weight: 66
+    weight: 65
     settings:
       size: 60
       placeholder: ''
@@ -381,7 +361,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_dspace_identifier:
-    weight: 64
+    weight: 67
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -389,7 +369,7 @@ content:
     type: link_default
     region: content
   field_dspace_item_id:
-    weight: 65
+    weight: 68
     settings:
       size: 60
       placeholder: ''
@@ -397,7 +377,7 @@ content:
     type: string_textfield
     region: content
   field_extent:
-    weight: 28
+    weight: 27
     settings:
       size: 60
       placeholder: ''
@@ -405,14 +385,14 @@ content:
     type: string_textfield
     region: content
   field_featured_item:
-    weight: 15
+    weight: 14
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_finding_aid:
-    weight: 28
+    weight: 29
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -438,7 +418,7 @@ content:
     type: link_default
     region: content
   field_is_part_of:
-    weight: 25
+    weight: 24
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -446,7 +426,7 @@ content:
     type: link_default
     region: content
   field_issn:
-    weight: 30
+    weight: 31
     settings:
       size: 60
       placeholder: ''
@@ -462,7 +442,7 @@ content:
     type: string_textfield
     region: content
   field_jhir:
-    weight: 67
+    weight: 66
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -480,7 +460,7 @@ content:
       match_limit: 10
     third_party_settings: {  }
   field_library_catalog_link:
-    weight: 31
+    weight: 28
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -504,7 +484,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_oclc_number:
-    weight: 29
+    weight: 30
     settings:
       size: 60
       placeholder: ''
@@ -535,7 +515,7 @@ content:
     weight: 16
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_spatial_coverage:
     weight: 23
@@ -595,32 +575,12 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 11
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    weight: 10
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
-    region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
     weight: 9
     region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -629,11 +589,6 @@ content:
     settings:
       size: 500
       placeholder: ''
-    third_party_settings: {  }
-  translation:
-    weight: 12
-    region: content
-    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
@@ -645,4 +600,9 @@ content:
       placeholder: ''
       match_limit: 10
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_access_terms: true
+  path: true
+  promote: true
+  sticky: true
+  translation: true

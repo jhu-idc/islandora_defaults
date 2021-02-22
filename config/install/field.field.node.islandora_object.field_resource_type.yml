@@ -1,4 +1,3 @@
-uuid: 5aa1dcd3-40c8-477e-ae56-3e071f073b39
 langcode: en
 status: true
 dependencies:
@@ -6,13 +5,12 @@ dependencies:
     - field.storage.node.field_resource_type
     - node.type.islandora_object
 _core:
-  default_config_hash: FsQFpgp2cpLBMyOnHmUA5xlWA9HiAC4qPUkcK2O2jzc
 id: node.islandora_object.field_resource_type
 field_name: field_resource_type
 entity_type: node
 bundle: islandora_object
 label: 'Resource Type'
-description: '<b>Required.</b> Record the nature or genre of the resource. Please select a term from the <a href="admin/structure/taxonomy/manage/resource_types/overview">Resource Types Taxonomy</a>.'
+description: '<b>Required.</b> Record the nature or type of the resource. Term(s) from the <a href="/admin/structure/taxonomy/manage/resource_types/overview" target="_blank">Resource Types</a> taxonomy.  '
 required: true
 translatable: false
 default_value: {  }

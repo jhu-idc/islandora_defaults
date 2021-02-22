@@ -1,4 +1,3 @@
-uuid: ee1fcb64-e7bd-4718-a98b-42a5c21f767d
 langcode: en
 status: true
 dependencies:
@@ -12,7 +11,7 @@ field_name: field_dspace_identifier
 entity_type: node
 bundle: islandora_object
 label: 'DSpace Identifier'
-description: 'Legacy item URI from DSpace platform. '
+description: '<b>Optional.</b> Record a legacy item''s URI from DSpace platform.'
 required: false
 translatable: false
 default_value: {  }

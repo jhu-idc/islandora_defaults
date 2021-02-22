@@ -1,4 +1,3 @@
-uuid: 3caffa63-b69b-4772-8141-c40ab394942e
 langcode: en
 status: true
 dependencies:
@@ -54,7 +53,6 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: BGfBEVZfQ_MW9H4r2eDyhSxojmtBBAFjYtvkRGYJQ9c
 id: node.islandora_object.binary
 targetEntityType: node
 bundle: islandora_object

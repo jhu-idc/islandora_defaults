@@ -54,6 +54,7 @@ dependencies:
     - link
     - reference_value_pair
     - user
+_core:
 id: node.islandora_object.default
 targetEntityType: node
 bundle: islandora_object
